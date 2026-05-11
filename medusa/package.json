@@ -22,21 +22,21 @@
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
   },
-  "dependencies": {
-    "@medusajs/admin-sdk": "2.8.8",
-    "@medusajs/cli": "2.8.8",
-    "@medusajs/framework": "2.8.8",
-    "@medusajs/medusa": "2.8.8",
-    "@mikro-orm/core": "6.4.3",
-    "@mikro-orm/knex": "6.4.3",
-    "@mikro-orm/migrations": "6.4.3",
-    "@mikro-orm/postgresql": "6.4.3",
+"dependencies": {
+    "@medusajs/admin-sdk": "2.14.2",
+    "@medusajs/cli": "2.14.2",
+    "@medusajs/framework": "2.14.2",
+    "@medusajs/medusa": "2.14.2",
+    "@mikro-orm/core": "6.6.12",
+    "@mikro-orm/knex": "6.6.12",
+    "@mikro-orm/migrations": "6.6.12",
+    "@mikro-orm/postgresql": "6.6.12",
     "awilix": "^8.0.1",
     "pg": "^8.13.0"
   },
   "devDependencies": {
-    "@medusajs/test-utils": "2.8.8",
-    "@mikro-orm/cli": "6.4.3",
+    "@medusajs/test-utils": "2.14.2",
+    "@mikro-orm/cli": "6.6.12",
     "@swc/core": "1.5.7",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.13",
@@ -51,7 +51,7 @@
     "typescript": "^5.6.2",
     "vite": "^5.2.11",
     "yalc": "^1.0.0-pre.53"
-  },
+  }
   "engines": {
     "node": ">=20"
   },
