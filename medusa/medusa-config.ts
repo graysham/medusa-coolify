@@ -25,39 +25,28 @@ module.exports = defineConfig({
   modules: [
     {
       resolve: "@medusajs/medusa/cache-redis",
+
       options: {
         redisUrl: process.env.REDIS_URL,
       },
     },
     {
       resolve: "@medusajs/medusa/event-bus-redis",
+
       options: {
         redisUrl: process.env.REDIS_URL,
       },
     },
     {
       resolve: "@medusajs/medusa/workflow-engine-redis",
+
       options: {
         redis: {
           url: process.env.REDIS_URL,
         },
       },
     },
-    {
-      resolve: "@medusajs/medusa/payment",
-      options: {
-        providers: [
-          {
-            resolve: "@medusajs/medusa/payment-stripe",
-            id: "stripe",
-            options: {
-              apiKey: process.env.STRIPE_API_KEY,
-              webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
-            },
-          },
-        ],
-      },
-    },
   ],
 
 });
+
