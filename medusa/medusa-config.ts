@@ -1,7 +1,5 @@
 import { loadEnv, defineConfig } from "@medusajs/framework/utils";
-
 loadEnv(process.env.NODE_ENV || "development", process.cwd());
-
 export default defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
@@ -34,6 +32,20 @@ export default defineConfig({
               region: process.env.S3_REGION,
               bucket: process.env.S3_BUCKET,
               endpoint: process.env.S3_ENDPOINT,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: "@medusajs/medusa/payment",
+      options: {
+        providers: [
+          {
+            resolve: "@medusajs/medusa/payment-stripe",
+            id: "stripe",
+            options: {
+              apiKey: process.env.STRIPE_API_KEY,
             },
           },
         ],
